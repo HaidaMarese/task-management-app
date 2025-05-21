@@ -23,10 +23,7 @@ This is a dynamic task management application that allows users to add, categori
 - JavaScript (ES6)
 - Local Storage
 
----
-
-### 🧠 Reflection
-
-During this project, I practiced DOM manipulation, event handling, and using browser local storage. A challenge I faced was dynamically updating the task list while keeping filters and status updates in sync. I solved this by breaking my code into smaller functions and testing each one.
-
-If I had more time, I would improve the UI with color-coding for different statuses, and add edit/delete functionality to tasks. I would also explore modularizing the JS using ES6 modules for better scalability.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/HaidaMarese/task-management-app.git
+    ```
