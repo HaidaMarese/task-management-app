@@ -1,0 +1,164 @@
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Label styling for accessibility */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+form input, form select, form button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Button with improved contrast */
+form button {
+  background-color: #004085; /* darker blue */
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700; /* bolder */
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #002752; /* even darker blue */
+  outline: none;
+  box-shadow: 0 0 0 3px #80bdff;
+}
+
+/* Focus visible for accessibility */
+form input:focus,
+form select:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: #fff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task-info {
+  flex: 1;
+  margin-right: 1rem;
+  word-break: break-word;
+}
+
+.task-item select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters label {
+  font-weight: 600;
+  align-self: center;
+  color: #222;
+}
+
+.filters select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .filters {
+    flex-direction: column;
+  }
+  .filters label,
+  .filters select {
+    width: 100%;
+  }
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .task-info {
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  form button {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+  .task-item select {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}

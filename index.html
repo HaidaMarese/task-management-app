@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Manage your daily tasks efficiently with the SBA Task Management App. Add, filter, and track tasks with deadlines and statuses." />
+  <title>SBA-Task Management App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Task Management App</h1>
+    </div>
+  </header>
+
+  <main>
+    <section id="task-entry" class="container">
+      <form id="task-form">
+        <label for="task-name">Task Name</label>
+        <input type="text" id="task-name" name="task-name" placeholder="Task name" required />
+
+        <label for="task-category">Category</label>
+        <input type="text" id="task-category" name="task-category" placeholder="Category" required />
+
+        <label for="task-deadline">Deadline</label>
+        <input type="date" id="task-deadline" name="task-deadline" required />
+
+        <label for="task-status">Status</label>
+        <select id="task-status" name="task-status" required>
+          <option value="In Progress" selected>In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section id="task-filters" class="container">
+      <div class="filters">
+        <label for="filter-status">Filter by Status:</label>
+        <select id="filter-status">
+          <option value="all" selected>All</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+          <option value="Overdue">Overdue</option>
+        </select>
+
+        <label for="filter-category">Filter by Category:</label>
+        <select id="filter-category">
+          <option value="all" selected>All</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="task-display" class="container">
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+     <p>&copy; 2025 SBA Task Management App. Built by Haida M.</p>
+    </div>
+  </footer>
+</body>
+</html>
