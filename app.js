@@ -11,12 +11,12 @@ function saveTasks() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// Capitalize first letter of a string
+
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-// Populate category filter dropdown
+
 function updateCategoryFilterOptions() {
   const categories = [...new Set(tasks.map(task => task.category.toLowerCase()))];
   filterCategory.innerHTML = '<option value="all" selected>All</option>';
@@ -28,7 +28,7 @@ function updateCategoryFilterOptions() {
   });
 }
 
-// Mark overdue tasks
+
 function checkOverdueTasks() {
   const today = new Date().toISOString().split('T')[0];
   let updated = false;
@@ -41,7 +41,7 @@ function checkOverdueTasks() {
   if (updated) saveTasks();
 }
 
-// Render filtered task list
+
 function renderTasks() {
   checkOverdueTasks();
 
@@ -67,7 +67,7 @@ function renderTasks() {
     li.tabIndex = 0;
     li.setAttribute('aria-label', `Task: ${task.name}, category: ${task.category}, deadline: ${task.deadline}, status: ${task.status}`);
 
-    // Status selector to allow status updates
+
     const statusSelect = document.createElement('select');
     ['In Progress', 'Completed', 'Overdue'].forEach(optionText => {
       const option = document.createElement('option');
@@ -93,7 +93,7 @@ function renderTasks() {
   });
 }
 
-// Form submission handler
+// Form submission 
 taskForm.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -124,10 +124,9 @@ taskForm.addEventListener('submit', e => {
   renderTasks();
 });
 
-// Filter dropdown listeners
+
 filterStatus.addEventListener('change', renderTasks);
 filterCategory.addEventListener('change', renderTasks);
 
-// Initial setup
 updateCategoryFilterOptions();
 renderTasks();
